@@ -1,0 +1,3 @@
+moviepy
+openai
+openai-whisper

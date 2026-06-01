@@ -1,0 +1,780 @@
+WEBVTT
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/5-0
+00:00:17.705 --> 00:00:18.145
+<v Ben Sivan>Hi there.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/6-0
+00:00:22.625 --> 00:00:25.585
+<v Ben Sivan>Ohh, hi there. My name is Ben Sivan.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/8-0
+00:00:28.065 --> 00:00:28.705
+<v Ben Sivan>Oh, hi there.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/9-0
+00:00:35.665 --> 00:00:38.865
+<v Ben Sivan>Oh, oh, hi, everyone.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/10-0
+00:00:44.625 --> 00:00:52.673
+<v Ben Sivan>Oh, hi everyone. My name is Ben,
+and this is a video series I want to do</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/10-1
+00:00:52.673 --> 00:00:53.225
+<v Ben Sivan>to...</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/11-0
+00:00:53.985 --> 00:00:58.945
+<v Ben Sivan>Without any specific agenda,
+just to get some publicity.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/12-0
+00:01:01.505 --> 00:01:01.985
+<v Ben Sivan>Mhm.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/15-0
+00:01:21.905 --> 00:01:22.545
+<v Ben Sivan>Oh, hi there.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/16-0
+00:01:23.625 --> 00:01:27.777
+<v Ben Sivan>My name is Ben.
+This is the first video in a series of</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/16-1
+00:01:27.777 --> 00:01:29.665
+<v Ben Sivan>videos that I want to do.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/17-0
+00:01:32.065 --> 00:01:32.465
+<v Ben Sivan>Two.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/18-0
+00:01:33.425 --> 00:01:36.065
+<v Ben Sivan>Get my open source project out there.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/19-0
+00:01:37.465 --> 00:01:41.185
+<v Ben Sivan>I don't have any specific agenda for that.
+I'm just...</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/20-0
+00:01:42.585 --> 00:01:48.268
+<v Ben Sivan>to get the conversation going and if you
+want to contribute in any way,</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/20-1
+00:01:48.268 --> 00:01:51.505
+<v Ben Sivan>I would love to get contribution on that.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/21-0
+00:01:58.305 --> 00:02:03.833
+<v Ben Sivan>So I'll give just a little bit background
+about myself. My name is Ben.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/21-1
+00:02:03.833 --> 00:02:07.288
+<v Ben Sivan>I am a data scientist and software
+engineer.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/21-2
+00:02:07.288 --> 00:02:11.665
+<v Ben Sivan>I have a background in bioinformatics and
+biotechnology.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/22-0
+00:02:13.905 --> 00:02:16.385
+<v Ben Sivan>The main thing that I'm interesting.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/23-0
+00:02:25.585 --> 00:02:30.665
+<v Ben Sivan>In terms of technology,
+I'm very drawn to a simple,</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/23-1
+00:02:30.665 --> 00:02:35.745
+<v Ben Sivan>composable atomic building blocks that
+you can use.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/24-0
+00:02:40.785 --> 00:02:44.175
+<v Ben Sivan>For that,
+I'm really drawn to the Lua programming</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/24-1
+00:02:44.175 --> 00:02:44.785
+<v Ben Sivan>language.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/25-0
+00:02:50.145 --> 00:02:56.065
+<v Ben Sivan>As you would see in part of my project,
+I'm using a specific dialect of Lua.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/28-0
+00:03:07.185 --> 00:03:11.228
+<v Ben Sivan>So,
+I have a master's degree in biotechnology,</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/28-1
+00:03:11.228 --> 00:03:11.745
+<v Ben Sivan>and...</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/29-0
+00:03:13.425 --> 00:03:13.945
+<v Ben Sivan>My.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/30-0
+00:03:15.425 --> 00:03:20.747
+<v Ben Sivan>Research background is mainly in plant
+science,</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/30-1
+00:03:20.747 --> 00:03:26.625
+<v Ben Sivan>so I have done masters on genetic
+engineering, so...</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/31-0
+00:03:30.385 --> 00:03:33.185
+<v Ben Sivan>So everything from genetic editing.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/32-0
+00:03:34.625 --> 00:03:35.185
+<v Ben Sivan>Crop.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/37-0
+00:03:57.345 --> 00:04:02.877
+<v Ben Sivan>So everything from genetic editing of
+plants, crop raiding,</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/37-1
+00:04:02.877 --> 00:04:08.225
+<v Ben Sivan>and up to cellular agriculture,
+meaning growing the cell.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/38-0
+00:04:15.505 --> 00:04:19.197
+<v Ben Sivan>Currently,
+I'm working at a company that's produced</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/38-1
+00:04:19.197 --> 00:04:21.185
+<v Ben Sivan>producing cocoa ingredients.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/39-0
+00:04:22.705 --> 00:04:23.505
+<v Ben Sivan>In the LAM.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/40-0
+00:04:24.625 --> 00:04:26.865
+<v Ben Sivan>Growing the actual cocoa cells.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/41-0
+00:04:28.305 --> 00:04:33.265
+<v Ben Sivan>From the seed in bioreactors to produce
+the cocoa mass.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/42-0
+00:04:34.785 --> 00:04:36.305
+<v Ben Sivan>for chocolate production.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/43-0
+00:04:41.825 --> 00:04:45.825
+<v Ben Sivan>I'll give a brief overview of my projects
+in mind.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/54-0
+00:05:39.985 --> 00:05:42.385
+<v Ben Sivan>I'm specifically interested in.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/55-0
+00:05:43.345 --> 00:05:45.825
+<v Ben Sivan>The space of knowledge management.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/56-0
+00:05:46.985 --> 00:05:51.142
+<v Ben Sivan>So,
+the first project I would like to show is</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/56-1
+00:05:51.142 --> 00:05:58.552
+<v Ben Sivan>an adoption of another very established
+open source project, which is Fossil SCM.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/56-2
+00:05:58.552 --> 00:06:05.962
+<v Ben Sivan>Fossil is a version control and knowledge
+management software that was created by</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/56-3
+00:06:05.962 --> 00:06:06.505
+<v Ben Sivan>the...</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/57-0
+00:06:07.425 --> 00:06:11.765
+<v Ben Sivan>Richard Hipp,
+the creator of SQL Lite for the</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/57-1
+00:06:11.765 --> 00:06:17.614
+<v Ben Sivan>development of SQL Lite,
+so it uses it as the backbone of the</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/57-2
+00:06:17.614 --> 00:06:21.105
+<v Ben Sivan>project. It has an SQL Lite database.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/58-0
+00:06:23.345 --> 00:06:25.825
+<v Ben Sivan>as the backbone of the software.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/59-0
+00:06:27.265 --> 00:06:29.585
+<v Ben Sivan>But it also, it all.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/60-0
+00:06:30.745 --> 00:06:36.945
+<v Ben Sivan>Many times it is called a GitHub in a box
+because it holds a local.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/61-0
+00:06:40.265 --> 00:06:46.934
+<v Ben Sivan>because it has its own server that you
+can deploy locally and open in the</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/61-1
+00:06:46.934 --> 00:06:54.145
+<v Ben Sivan>browser with a user interface to interact
+with the knowledge in the repository.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/62-0
+00:06:59.265 --> 00:07:03.105
+<v Ben Sivan>So, the idea of this project is to take...</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/63-0
+00:07:04.065 --> 00:07:09.313
+<v Ben Sivan>the fossil project,
+but not only for software management,</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/63-1
+00:07:09.313 --> 00:07:16.822
+<v Ben Sivan>not only for source control management,
+but more for general knowledge management.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/63-2
+00:07:16.822 --> 00:07:24.061
+<v Ben Sivan>And the key thing that I find that is the
+hurdle with most knowledge management</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/63-3
+00:07:24.061 --> 00:07:24.785
+<v Ben Sivan>software</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/64-0
+00:07:25.665 --> 00:07:30.545
+<v Ben Sivan>Is the manual processing stage?</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/65-0
+00:07:32.785 --> 00:07:42.745
+<v Ben Sivan>Everything, it is always a different task,
+a separate task to manage the knowledge</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/65-1
+00:07:42.745 --> 00:07:44.065
+<v Ben Sivan>and use it.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/66-0
+00:07:45.225 --> 00:07:50.990
+<v Ben Sivan>But it doesn't have to be like that.
+The way our mind works,</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/66-1
+00:07:50.990 --> 00:07:57.795
+<v Ben Sivan>when we're retrieving information from
+memory or within a conversation,</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/66-2
+00:07:57.795 --> 00:08:05.545
+<v Ben Sivan>we're already processing it within the
+conversation and thinking of new thoughts.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/67-0
+00:08:06.465 --> 00:08:11.937
+<v Ben Sivan>Already within it,
+so the way that I want to do it is to</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/67-1
+00:08:11.937 --> 00:08:13.665
+<v Ben Sivan>have a persisting.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/68-0
+00:08:14.865 --> 00:08:17.265
+<v Ben Sivan>Knowledge management software.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/69-0
+00:08:18.945 --> 00:08:23.665
+<v Ben Sivan>Using large language models and general
+natural language processing.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/70-0
+00:08:29.105 --> 00:08:30.425
+<v Ben Sivan>So, the idea is...</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/71-0
+00:08:32.945 --> 00:08:36.705
+<v Ben Sivan>When you write notes and speak with the
+model.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/72-0
+00:08:37.985 --> 00:08:40.865
+<v Ben Sivan>In the background,
+it retrieves information.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/73-0
+00:08:42.945 --> 00:08:45.105
+<v Ben Sivan>Bubbling context based on.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/74-0
+00:08:46.305 --> 00:08:49.585
+<v Ben Sivan>The conversation that you're having with
+the model.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/75-0
+00:08:51.665 --> 00:08:56.411
+<v Ben Sivan>And then this,
+those notes are getting processed into</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/75-1
+00:08:56.411 --> 00:08:57.905
+<v Ben Sivan>different tiered.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/76-0
+00:08:59.425 --> 00:09:03.775
+<v Ben Sivan>Into different tiers of level of
+processing,</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/76-1
+00:09:03.775 --> 00:09:11.315
+<v Ben Sivan>like the same way that you have the
+settle custom model, settle custom model,</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/76-2
+00:09:11.315 --> 00:09:13.345
+<v Ben Sivan>settle custom method.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/77-0
+00:09:15.265 --> 00:09:22.451
+<v Ben Sivan>So you have extremely raw notes,
+the thing that was retrieved as is,</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/77-1
+00:09:22.451 --> 00:09:28.908
+<v Ben Sivan>and then semi-processed notes,
+connection of loose threads of</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/77-2
+00:09:28.908 --> 00:09:31.825
+<v Ben Sivan>information coming together.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/78-0
+00:09:35.105 --> 00:09:36.465
+<v Ben Sivan>After that, you have...</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/79-0
+00:09:38.385 --> 00:09:40.785
+<v Ben Sivan>Like more wiki notes, which are...</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/80-0
+00:09:43.825 --> 00:09:45.105
+<v Ben Sivan>Connection off.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/81-0
+00:09:47.105 --> 00:09:55.220
+<v Ben Sivan>atomic ideas and with that you have
+atomic nodes which are a single idea,</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/81-1
+00:09:55.220 --> 00:09:56.865
+<v Ben Sivan>self-contained.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/82-0
+00:10:01.385 --> 00:10:03.425
+<v Ben Sivan>Play netball within itself.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/83-0
+00:10:08.545 --> 00:10:10.705
+<v Ben Sivan>So, the the knowledge.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/84-0
+00:10:12.145 --> 00:10:13.905
+<v Ben Sivan>Repository, the knowledge.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/85-0
+00:10:17.665 --> 00:10:18.945
+<v Ben Sivan>The Knowledge Bolt.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/87-0
+00:10:19.905 --> 00:10:27.811
+<v Ben Sivan>is being processed within the usage.
+So as you use the knowledge more and more,</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/87-1
+00:10:27.811 --> 00:10:33.345
+<v Ben Sivan>the vaults becoming more adaptive,
+more smart, smarter.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/88-0
+00:10:39.105 --> 00:10:40.225
+<v Ben Sivan>More relevant.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/89-0
+00:10:42.065 --> 00:10:48.286
+<v Ben Sivan>The second project, on a similar note,
+is the filament project.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/89-1
+00:10:48.286 --> 00:10:51.105
+<v Ben Sivan>So the filament project is...</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/90-0
+00:10:52.625 --> 00:10:54.785
+<v Ben Sivan>I'm personally a fan of...</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/91-0
+00:10:56.625 --> 00:10:58.225
+<v Ben Sivan>Non-fiction detection.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/92-0
+00:11:01.345 --> 00:11:03.345
+<v Ben Sivan>non-fiction detective shows.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/93-0
+00:11:05.425 --> 00:11:09.425
+<v Ben Sivan>non-fiction detective shows.
+So like true kind podcasts.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/94-0
+00:11:11.025 --> 00:11:17.025
+<v Ben Sivan>And the idea of the filming project is to
+draw information from.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/95-0
+00:11:19.225 --> 00:11:20.465
+<v Ben Sivan>Open datasets.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/96-0
+00:11:21.665 --> 00:11:22.145
+<v Ben Sivan>Line.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/97-0
+00:11:24.545 --> 00:11:31.585
+<v Ben Sivan>from open data sets of unidentified human
+remains and missing persons.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/98-0
+00:11:33.105 --> 00:11:36.705
+<v Ben Sivan>And then trying to connect those loose
+threads.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/99-0
+00:11:37.905 --> 00:11:39.345
+<v Ben Sivan>into a coherent.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/100-0
+00:11:45.265 --> 00:11:46.705
+<v Ben Sivan>Into A coherent.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/101-0
+00:11:51.665 --> 00:11:56.225
+<v Ben Sivan>Into A coherent narrative that you can
+gather together to explain.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/102-0
+00:11:57.265 --> 00:11:58.065
+<v Ben Sivan>Howdy!</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/103-0
+00:11:59.185 --> 00:12:01.105
+<v Ben Sivan>Thanks, coming together.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/104-0
+00:12:06.945 --> 00:12:11.537
+<v Ben Sivan>This also uses many of the same
+technologies,</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/104-1
+00:12:11.537 --> 00:12:18.225
+<v Ben Sivan>like retrieval augmented generation
+method, large language models.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/105-0
+00:12:23.825 --> 00:12:29.708
+<v Ben Sivan>general natural language processing to
+score and rank different parts of the</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/105-1
+00:12:29.708 --> 00:12:30.625
+<v Ben Sivan>information.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/106-0
+00:12:33.265 --> 00:12:34.305
+<v Ben Sivan>And this is all.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/107-0
+00:12:36.305 --> 00:12:42.972
+<v Ben Sivan>combined into a matching algorithm to try
+and connect all the loose threads of</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/107-1
+00:12:42.972 --> 00:12:43.985
+<v Ben Sivan>information.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/108-0
+00:12:45.985 --> 00:12:48.785
+<v Ben Sivan>Now, here,
+as much as you have more information.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/109-0
+00:12:50.265 --> 00:12:53.265
+<v Ben Sivan>The results you will get would be better,
+and since...</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/110-0
+00:12:55.785 --> 00:12:56.465
+<v Ben Sivan>Open.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/111-0
+00:12:58.945 --> 00:13:00.145
+<v Ben Sivan>There aren't many.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/112-0
+00:13:01.225 --> 00:13:08.899
+<v Ben Sivan>enough open platforms of information.
+Most of the information is locked in the</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/112-1
+00:13:08.899 --> 00:13:11.425
+<v Ben Sivan>law enforcement databases.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/113-0
+00:13:14.145 --> 00:13:15.185
+<v Ben Sivan>So, this is where...</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/114-0
+00:13:16.305 --> 00:13:19.905
+<v Ben Sivan>It would be a huge help to have
+collaboration.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/115-0
+00:13:27.025 --> 00:13:29.585
+<v Ben Sivan>Another tool that I want to talk about is.
+..</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/116-0
+00:13:30.425 --> 00:13:34.225
+<v Ben Sivan>And I call it Brain X,
+which is brain extension.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/117-0
+00:13:35.665 --> 00:13:37.025
+<v Ben Sivan>I started using.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/118-0
+00:13:38.225 --> 00:13:45.362
+<v Ben Sivan>Obsidian for knowledge management as my
+notes vault. And they found it, yeah,</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/118-1
+00:13:45.362 --> 00:13:50.944
+<v Ben Sivan>it's a cool project and awesome user
+interface, very smooth.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/118-2
+00:13:50.944 --> 00:13:58.265
+<v Ben Sivan>I like the idea that you have everything
+local and you have the flexibility to.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/119-0
+00:13:58.865 --> 00:14:02.157
+<v Ben Sivan>sort it out in any way that you would
+like.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/119-1
+00:14:02.157 --> 00:14:06.945
+<v Ben Sivan>It doesn't give you a strict schema that
+you need to adhere to.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/120-0
+00:14:09.025 --> 00:14:13.335
+<v Ben Sivan>With that,
+and this is an external tool that I</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/120-1
+00:14:13.335 --> 00:14:20.855
+<v Ben Sivan>needed to keep open and keep remembering
+to get into and write the note within my</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/120-2
+00:14:20.855 --> 00:14:27.825
+<v Ben Sivan>work, which is not my preferred workflow.
+So the thing that I've done is...</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/121-0
+00:14:28.625 --> 00:14:33.809
+<v Ben Sivan>to generate a command line interface
+because I'm a terminal dweller.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/121-1
+00:14:33.809 --> 00:14:37.265
+<v Ben Sivan>I'm working within the terminal all day
+long.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/122-0
+00:14:39.105 --> 00:14:43.425
+<v Ben Sivan>So, and this tool, it can be work.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/123-0
+00:14:44.625 --> 00:14:50.298
+<v Ben Sivan>can be connected into an obsidian vault
+and work in tandem with it,</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/123-1
+00:14:50.298 --> 00:14:56.555
+<v Ben Sivan>but doesn't have to. You can use it as is.
+It also combines node with task</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/123-2
+00:14:56.555 --> 00:15:02.312
+<v Ben Sivan>management. So you get both. And just,
+I call it node where you are,</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/123-3
+00:15:02.312 --> 00:15:05.065
+<v Ben Sivan>because I'm in the terminal side.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/124-0
+00:15:05.345 --> 00:15:09.775
+<v Ben Sivan>I take my notes in the term,
+just the easiest for me.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/124-1
+00:15:09.775 --> 00:15:14.288
+<v Ben Sivan>And most of the time,
+I'm not writing a very coherent,</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/124-2
+00:15:14.288 --> 00:15:18.801
+<v Ben Sivan>long form notes.
+Those are just one liners, reminders,</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/124-3
+00:15:18.801 --> 00:15:21.345
+<v Ben Sivan>and things that I would like to</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/125-0
+00:15:22.625 --> 00:15:28.109
+<v Ben Sivan>come back to later and remember the
+context in which they were written.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/125-1
+00:15:28.109 --> 00:15:32.069
+<v Ben Sivan>So again,
+I can use natural language processing and</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/125-2
+00:15:32.069 --> 00:15:33.745
+<v Ben Sivan>large language models.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/126-0
+00:15:36.785 --> 00:15:42.900
+<v Ben Sivan>To process all of those,
+this is coming back into the fossil</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/126-1
+00:15:42.900 --> 00:15:44.705
+<v Ben Sivan>repository, and...</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/127-0
+00:15:47.025 --> 00:15:54.748
+<v Ben Sivan>I'm using SQLite backend,
+but also markdown and readable text files</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/127-1
+00:15:54.748 --> 00:15:56.225
+<v Ben Sivan>in the vault.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/128-0
+00:16:00.865 --> 00:16:06.583
+<v Ben Sivan>Another project that I would like to talk
+about is the Lua M.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/128-1
+00:16:06.583 --> 00:16:08.705
+<v Ben Sivan>Lua M is in modernized.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/129-0
+00:16:09.665 --> 00:16:10.385
+<v Ben Sivan>Minimum.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/130-0
+00:16:11.265 --> 00:16:13.585
+<v Ben Sivan>modernize and minimalize.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/131-0
+00:16:15.585 --> 00:16:25.029
+<v Ben Sivan>modernized and minimal syntax for Lua.
+So it's a minimal and modernized dialect</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/131-1
+00:16:25.029 --> 00:16:30.577
+<v Ben Sivan>of Lua.
+The idea is that I removed some of the</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/131-2
+00:16:30.577 --> 00:16:34.945
+<v Ben Sivan>features that Lua gives to have more.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/132-0
+00:16:35.265 --> 00:16:36.065
+<v Ben Sivan>To have.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/133-0
+00:16:37.945 --> 00:16:43.305
+<v Ben Sivan>Preferably a single way to do a thing,
+but also to give it.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/134-0
+00:16:46.865 --> 00:16:48.945
+<v Ben Sivan>Keep it concise.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/135-0
+00:16:53.505 --> 00:16:56.385
+<v Ben Sivan>Keep it concise and purely.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/136-0
+00:17:02.145 --> 00:17:06.385
+<v Ben Sivan>To be concise and purely procedural,
+so I removed.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/137-0
+00:17:09.305 --> 00:17:13.345
+<v Ben Sivan>Object-oriented features like meta tables.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/138-0
+00:17:15.345 --> 00:17:17.585
+<v Ben Sivan>Also, I'm using a...</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/139-0
+00:17:23.665 --> 00:17:24.625
+<v Ben Sivan>Band equal.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/140-0
+00:17:25.825 --> 00:17:32.918
+<v Ben Sivan>to donate to notate on equality. So yeah,
+you can see it in the dedicated program.</v>
+
+3fd99b7a-4be4-41a4-bbc2-eff4c876514e/140-1
+00:17:32.918 --> 00:17:39.585
+<v Ben Sivan>And also I have a few of my projects that
+uses this language as the backbone.</v>
