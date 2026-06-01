@@ -17,13 +17,13 @@ from video_story_editor import parse_vtt_segments, edit_video
 def compile_auraradar_video():
     # Define paths relative to the project root
     root_dir = os.path.dirname(current_dir)
-    raw_video = os.path.join(root_dir, "videos", "raw_talk.mp4")
-    vtt_file = os.path.join(root_dir, "transcripts", "raw_talk.vtt")
-    output_video = os.path.join(root_dir, "coherent_storyline.mp4")
+    raw_video = os.path.join(root_dir, "data", "raw", "raw_talk.mp4")
+    vtt_file = os.path.join(root_dir, "data", "raw", "raw_talk.vtt")
+    output_video = os.path.join(root_dir, "data", "processed", "coherent_storyline.mp4")
     
     # Create required directories
-    os.makedirs(os.path.join(root_dir, "videos"), exist_ok=True)
-    os.makedirs(os.path.join(root_dir, "transcripts"), exist_ok=True)
+    os.makedirs(os.path.join(root_dir, "data", "raw"), exist_ok=True)
+    os.makedirs(os.path.join(root_dir, "data", "processed"), exist_ok=True)
 
     if not os.path.exists(raw_video):
         print(f"Error: Raw footage not found at: {raw_video}")
@@ -80,7 +80,7 @@ def compile_auraradar_video():
     # inspect it to find the index of your best takes.
     # List the segment indices in order here to build your narrative:
     # ----------------------------------------------------
-    selected_indices = []
+    selected_indices = [3, 4, 8, 9, 10, 11, 13, 14, 17, 18, 19, 25, 26, 29, 30, 39, 40, 45, 49, 50, 55, 56, 59, 64, 65, 66, 71, 75, 76, 78, 85, 86, 87, 89, 90, 91, 92, 95, 96, 105, 106, 107, 110, 111, 112, 113, 116, 118, 120, 122, 128, 129, 131, 139, 140, 141, 142, 145, 146, 151, 155, 167, 168, 169, 172, 173, 176]
     
     if not selected_indices:
         print("\nTip: Your 'selected_indices' list in this script is currently empty.")

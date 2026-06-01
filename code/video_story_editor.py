@@ -2,7 +2,7 @@
 """
 Video Story Editor: Programmatically edit MP4 files to create a coherent storyline
 from fragmented videos and transcriptions using AI (OpenAI GPT-3.5).
-Uses FFmpeg for efficient segment extraction and concatenation.
+Uses MoviePy for smoother transitions and segment extraction.
 """
 
 import ast
@@ -12,12 +12,17 @@ import sys
 import tempfile
 import openai
 import whisper
+from moviepy import VideoFileClip, concatenate_videoclips, vfx
 
 # Configuration
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")  # Set your API key as an environment variable
-VIDEO_DIR = "videos"  # Folder containing fragmented MP4 files
-TRANSCRIPT_DIR = "transcripts"  # Folder containing corresponding text or VTT files
-OUTPUT_FILE = "coherent_storyline.mp4"
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+VIDEO_DIR = "data/raw"
+TRANSCRIPT_DIR = "data/raw"
+OUTPUT_FILE = "data/processed/coherent_storyline.mp4"
+
+# Editing settings for smoothness
+HANDLE_PADDING = 0.1  # Seconds to add to start/end of segments
+CROSSFADE_DURATION = 0.2  # Seconds of overlap between clips
 
 
 def parse_timestamp(timestamp):
@@ -31,19 +36,6 @@ def parse_timestamp(timestamp):
         minutes, seconds = parts
         return float(minutes) * 60 + float(seconds)
     return float(parts[0])
-
-
-def get_video_duration(video_path):
-    """Get the duration of a video file in seconds."""
-    result = subprocess.run(
-        ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "default=noprint_wrappers=1:nokey=1:csv=p=0", video_path],
-        capture_output=True,
-        text=True,
-    )
-    try:
-        return float(result.stdout.strip())
-    except ValueError:
-        return None
 
 
 def parse_vtt_segments(file_path):
@@ -102,7 +94,7 @@ def transcribe_clip_segments(video_path):
 
 def generate_transcripts(video_dir, transcript_dir):
     """Generate transcriptions using Whisper if not already present."""
-    model = whisper.load_model("base")  # Use 'medium' or 'large' for better accuracy
+    model = whisper.load_model("base")
     os.makedirs(transcript_dir, exist_ok=True)
     for file in sorted(os.listdir(video_dir)):
         if file.endswith(".mp4"):
@@ -136,22 +128,13 @@ def load_segments(video_dir, transcript_dir):
             print(f"Loading VTT transcript for {clip}...")
             segments_by_clip[clip] = parse_vtt_segments(vtt_path)
         elif os.path.exists(txt_path):
-            print(
-                f"VTT not found for {clip}. Falling back to timed transcript generation from audio."
-            )
+            print(f"VTT not found for {clip}. Falling back to timed transcript generation from audio.")
             segments_by_clip[clip] = transcribe_clip_segments(clip_path)
         else:
             print(f"No transcript found for {clip}. Generating timed transcript from audio.")
             segments_by_clip[clip] = transcribe_clip_segments(clip_path)
 
-        if not segments_by_clip[clip]:
-            print(f"Warning: no segments were loaded for {clip}.")
-
     return segments_by_clip
-
-
-def format_segment_label(clip_name, index):
-    return f"{clip_name}_{index}"
 
 
 def select_story_segments(segments_by_clip):
@@ -162,7 +145,7 @@ def select_story_segments(segments_by_clip):
 
     for clip_name, segments in segments_by_clip.items():
         for idx, seg in enumerate(segments, start=1):
-            label = format_segment_label(clip_name, idx)
+            label = f"{clip_name}_{idx}"
             segment_map[label] = {
                 "clip": clip_name,
                 "start": seg["start"],
@@ -173,134 +156,94 @@ def select_story_segments(segments_by_clip):
                 f"{label}: {seg['start']:.2f}-{seg['end']:.2f} | {seg['text']}"
             )
 
-    if not prompt_lines:
-        print("No transcript segments available to select from.")
-        return []
-
     if not OPENAI_API_KEY:
-        print("OPENAI_API_KEY is not set. Keeping all segments in original order.")
+        print("OPENAI_API_KEY not set. Using all segments.")
         return [segment_map[label] for label in segment_map]
 
     openai.api_key = OPENAI_API_KEY
     prompt = (
-        "You are given video segments from one or more clips. Each segment has a start/end time "
-        "and the transcript text. The speaker is talking to camera with fragmented sentences and "
-        "multiple subjects. Select the segments that should remain in the final streamlined "
-        "storyline. Keep the result coherent and ordered. Output only a Python list of segment "
-        "labels in final order, for example ['clip1_3', 'clip1_1']. Do not add any narrative text.\n\n"
-        + "\n".join(prompt_lines)
+        "Select the segments that should remain in the final streamlined storyline. "
+        "Output only a Python list of labels.\n\n" + "\n".join(prompt_lines)
     )
 
-    print("Asking AI to choose the clearest storyline segments...")
     try:
         response = openai.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[{"role": "user", "content": prompt}],
-            max_tokens=300,
         )
         labels = ast.literal_eval(response.choices[0].message.content.strip())
-        if not isinstance(labels, list):
-            raise ValueError("Expected a list of labels")
-
-        for label in labels:
-            if label in segment_map:
-                selected_segments.append(segment_map[label])
-            else:
-                print(f"Warning: unknown label returned by AI: {label}")
-
-        if not selected_segments:
-            raise ValueError("No valid labels returned by AI")
-
-        return selected_segments
+        return [segment_map[l] for l in labels if l in segment_map]
     except Exception as e:
-        print(f"OpenAI selection failed: {e}")
-        print("Falling back to all segments in original order.")
+        print(f"AI selection failed: {e}. Using all segments.")
         return [segment_map[label] for label in segment_map]
 
 
 def edit_video(selected_segments, output_file):
-    """Extract and concatenate selected segments into the final video."""
+    """Extract and concatenate selected segments into the final video using MoviePy."""
     if not selected_segments:
-        print("No segments selected for the output video.")
+        print("No segments selected.")
         sys.exit(1)
 
-    print(f"Extracting {len(selected_segments)} segments...")
-    with tempfile.TemporaryDirectory() as tmpdir:
-        segment_paths = []
-        for i, item in enumerate(selected_segments):
-            clip_path = os.path.join(VIDEO_DIR, item["clip"])
-            start = max(0, float(item["start"]))
-            duration = get_video_duration(clip_path)
-            end = min(float(item["end"]), duration or float(item["end"]))
-            
-            if end <= start:
-                print(f"Skipping invalid segment {item['clip']} {start}-{end}")
-                continue
-            
-            segment_output = os.path.join(tmpdir, f"segment_{i:04d}.mp4")
-            print(f"Extracting segment {i+1}/{len(selected_segments)}: {item['clip']} ({start:.2f}s - {end:.2f}s)")
-            
-            cmd = [
-                "ffmpeg",
-                "-i", clip_path,
-                "-ss", str(start),
-                "-to", str(end),
-                "-c:v", "libx264",
-                "-c:a", "aac",
-                "-preset", "ultrafast",
-                "-crf", "23",
-                "-y",
-                segment_output,
-            ]
-            subprocess.run(cmd, capture_output=True, check=True)
-            segment_paths.append(segment_output)
+    clips = []
+    video_cache = {}
 
-        if not segment_paths:
-            print("No valid segments available for final output.")
+    print(f"Processing {len(selected_segments)} segments with MoviePy...")
+    
+    try:
+        for i, item in enumerate(selected_segments):
+            clip_name = item["clip"]
+            if clip_name not in video_cache:
+                video_cache[clip_name] = VideoFileClip(os.path.join(VIDEO_DIR, clip_name))
+            
+            full_video = video_cache[clip_name]
+            
+            # Apply padding (handles) to avoid clipping words
+            start = max(0, item["start"] - HANDLE_PADDING)
+            end = min(full_video.duration, item["end"] + HANDLE_PADDING)
+            
+            print(f"  Segment {i+1}: {clip_name} ({start:.2f}s - {end:.2f}s)")
+            
+            # Extract subclip
+            subclip = full_video.subclipped(start, end)
+            
+            # Add crossfade transition if not the first clip
+            if clips and CROSSFADE_DURATION > 0:
+                subclip = subclip.with_effects([vfx.CrossFadeIn(CROSSFADE_DURATION)])
+            
+            clips.append(subclip)
+
+        if not clips:
+            print("No valid segments to compile.")
             sys.exit(1)
 
-        print("Concatenating segments...")
+        print("Joining clips and rendering final video (this may take a while)...")
+        # padding=-CROSSFADE_DURATION overlaps clips to allow crossfade effect
+        final_video = concatenate_videoclips(clips, method="compose", padding=-CROSSFADE_DURATION)
         
-        # Create a concat file
-        concat_file = os.path.join(tmpdir, "concat.txt")
-        with open(concat_file, 'w') as f:
-            for seg_path in segment_paths:
-                f.write(f"file '{os.path.abspath(seg_path)}'\n")
-
-        cmd = [
-            "ffmpeg",
-            "-f", "concat",
-            "-safe", "0",
-            "-i", concat_file,
-            "-c", "copy",
-            "-y",
+        # Write the file. Using a high quality preset.
+        final_video.write_videofile(
             output_file,
-        ]
-        result = subprocess.run(cmd, capture_output=True, text=True)
-        if result.returncode != 0:
-            print(f"FFmpeg error: {result.stderr}")
-            raise RuntimeError(f"FFmpeg concatenation failed: {result.stderr}")
+            codec="libx264",
+            audio_codec="aac",
+            fps=24,
+            preset="medium",
+            threads=4
+        )
+        
+        print(f"Successfully saved coherent storyline to {output_file}")
 
-        print(f"Edited video saved as {output_file}")
+    finally:
+        # Clean up resources
+        for v in video_cache.values():
+            v.close()
 
 
 def main():
     os.makedirs(VIDEO_DIR, exist_ok=True)
     os.makedirs(TRANSCRIPT_DIR, exist_ok=True)
-
     generate_transcripts(VIDEO_DIR, TRANSCRIPT_DIR)
     segments_by_clip = load_segments(VIDEO_DIR, TRANSCRIPT_DIR)
-
-    if not segments_by_clip:
-        print("No timed transcript segments available. Add VTT or TXT transcripts and retry.")
-        sys.exit(1)
-
     selected_segments = select_story_segments(segments_by_clip)
-    if not selected_segments:
-        print("No segments selected for the storyline.")
-        sys.exit(1)
-
-    print("Editing video into the coherent storyline...")
     edit_video(selected_segments, OUTPUT_FILE)
 
 
