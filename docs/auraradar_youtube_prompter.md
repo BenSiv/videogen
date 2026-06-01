@@ -1,203 +1,148 @@
 # AuraRadar Video Spoken Script - Prompter Format
 
-We are living in a profound paradox. 
+Hi everyone. 
 
-We have never been more digitally connected, 
-yet we are in the midst of a global loneliness pandemic.
+Today, we are more connected online than ever, 
+but many of us feel lonely in the real world.
+
+Why is that?
 
 ---
 
-The commercial social and dating apps we rely on 
-have a fundamental, structural conflict of interest.
+Well, the social and dating apps we use 
+have a big conflict of interest.
 
-Their business models are designed to keep you swiping endlessly on their platform 
-to monetize your attention.
+Their business model is built to keep us swiping on our screens 
+so they can show us ads.
 
-If you actually find a real connection and get off their app, 
+If we actually meet someone and leave the app, 
 they lose a customer.
 
-Worse, standard apps force you to surrender your absolute data sovereignty—
-sending your location history, preferences, and private swipes to centralized databases.
+Plus, they track our location and swipe history 
+on their central servers all the time.
 
 ---
 
-I wanted to build something entirely different.
+I wanted to build something different.
 
-A tool that returns the power of connection back to your immediate physical space, 
+A tool that helps us connect with people physically close to us, 
 with absolute privacy.
 
-Say hello to AuraRadar: 
+This is AuraRadar:
 
-A completely open-source, serverless, local-first proximity network 
-designed to get you off your screen and into real-world, face-to-face conversations.
-
----
-
-Let's look at how this works in practice.
-
-When you launch AuraRadar, there are no central servers to log into.
-
-Your profile, your type, and your interactions reside entirely on your physical device, 
-fully encrypted in a local SQLCipher database.
-
-You set up your public vibe tags—
-like Rust development, sci-fi novels, or indie music.
+A completely free, open-source app 
+that connects you directly to the people around you, 
+without any middleman.
 
 ---
 
-Once active, the app scans your physical proximity for other peers.
+Let's look at how it works in real life.
 
-Using a specialized P2P mesh network, it discovers nearby active profiles.
+When you open the app, 
+there is no sign-up or central server.
 
-When a co-present peer enters your orbit, 
-they appear on your radar as a Resonance.
+Your profile and chats are saved only on your own device, 
+fully encrypted.
 
----
-
-You can inspect their profile, interests, and distance.
-
-If there's a mutual resonance and you both swipe Like, 
-the app triggers an immediate match celebration.
+You just put in a few simple vibe tags—
+like programming, books, or coffee.
 
 ---
 
-Instantly, a secure, local peer-to-peer chat thread is established.
+The app scans your local physical space.
 
-You can send an encrypted greeting to break the ice 
-and coordinate a face-to-face meetup right then and there.
+When another user is nearby, 
+they show up on your screen.
 
-Once you connect, the app gets out of your way.
-
----
-
-Now, if you've ever used a location-based app, 
-you know there is a serious safety hazard.
-
-If you're on a crowded bus or in a tight coffee shop, 
-turning on a proximity scanner can feel incredibly vulnerable.
-
-If anyone can see exactly where you are sitting, 
-you risk unwanted, intrusive physical approaches.
-
-We call this the Transit Space Nightmare.
+If you both like each other's profiles, 
+you match immediately.
 
 ---
 
-To solve this, AuraRadar implements Ghost Mode, 
-also known as Asymmetric Discovery.
+A secure, direct chat opens up right away.
 
-When you activate Ghost Mode, your phone goes completely radio-silent.
+You can send a quick message to say hello 
+and coordinate a face-to-face meetup.
 
-It broadcasts absolutely nothing.
-
-However, it continues to passively listen to active broadcasters in the room, 
-creating a temporary, secure list of silhouettes stored only on your device.
-
-You are completely invisible to the room.
+Once you match, the app gets out of your way 
+so you can talk in real life.
 
 ---
 
-Once you return to the safety of your home, 
-you can review your history and swipe on people you crossed paths with.
+But using location apps in public can feel unsafe.
 
-Because you're no longer in physical range, 
-the app packages your swipe into a cryptographically locked digital envelope 
-that only the recipient's phone can decrypt.
+If you are on a crowded bus or at a cafe, 
+you don't want strangers to see exactly where you are sitting.
 
-They get the notification later, and when they swipe back, the match is completed.
-
-Spontaneous connection, absolute physical safety.
+To solve this, we built Ghost Mode.
 
 ---
 
-Let's open the hood and talk about the architecture.
+When you turn on Ghost Mode, 
+your phone goes completely silent.
 
-AuraRadar is built as a hybrid native application.
+It doesn't broadcast any wireless signals.
 
-The user interface is a high-performance React frontend 
-styled with custom glassmorphism.
+But it still listens.
 
-But the real engine is written in native Rust, 
-bridged securely to the frontend using Tauri v2.
+It silently saves a temporary list of profiles nearby, 
+while keeping you completely invisible to everyone else.
 
 ---
+
+When you get home safely, you can check who was around, 
+swipe Like, 
+and the app sends an encrypted message that only their phone can unlock.
+
+When they swipe back, you match.
+
+It is spontaneous connection, with absolute safety.
+
+---
+
+Now, let's talk about the tech in very simple terms.
+
+AuraRadar uses a fast React frontend, 
+but the core engine is written in Rust.
 
 First, there are no central servers.
 
-Proximity discovery is handled entirely through an autonomous P2P swarm.
+Discovery is handled phone-to-phone using a local mesh network.
 
-Under the hood, we leverage libp2p for mesh networking.
-
-To bypass OS-level multicast blocks and mobile hotspot restrictions, 
-we built a dedicated subnet dialing thread running on port 14224.
-
-This directly establishes TCP handshakes between mobile nodes, 
-even when behind complex NATs.
+It works even if you don't have internet or mobile data.
 
 ---
 
-But how do we prove two people are close to each other 
-without exposing their raw GPS coordinates?
+Second, how do we prove you are close to someone 
+without revealing your raw GPS coordinates?
 
-If a malicious node queries the app repeatedly, 
-they could triangulate your exact location.
-
-AuraRadar solves this using Zero-Knowledge Proximity Handshakes 
-based on continuous Euclidean distances.
+We use zero-knowledge mathematics.
 
 ---
 
-Here is the math.
+Your phone encrypts your location.
 
-Peer A encrypts their coordinates using the Paillier homomorphic cryptosystem 
-and sends the ciphertexts to Peer B.
+The other phone does some quick math on that encrypted data 
+to check if you are within range, 
+but it can never see your actual coordinates.
 
-Because Paillier is additively homomorphic, 
-Peer B can compute the encrypted squared distance between them 
-without learning Peer A's actual coordinates.
-
-To prevent Peer A from learning the distance upon decryption, 
-Peer B multiplies it by a high-entropy random blinding factor r.
-
-Peer A decrypts the blinded value, 
-and generates a compact Bulletproof range proof 
-proving that the blinded distance is less than the maximum allowable range.
-
-Peer B verifies the Bulletproof.
-
-Proximity is verified, coordinates remain 100% secret, 
-and no trusted setup is ever required.
+Your location never leaves your phone!
 
 ---
 
-For mobile devices, this whole process is compiled down 
-to highly optimized native Rust libraries 
-exposed to a persistent Android Foreground Service.
+AuraRadar is a proof-of-concept showing that we can build social tools 
+that respect our privacy and help us build real-world communities.
 
-This keeps the proximity scanning active in the background, 
-firing local notifications even when your phone is in your pocket.
+The project is fully open source under the AGPL v3 license.
 
----
-
-AuraRadar is more than just a software utility.
-
-It is an exploration in reclaiming our digital spaces.
-
-It is a proof-of-concept that local-first, serverless networks 
-can replace extractive attention-economy platforms 
-and help us build healthy, safe, face-to-face communities.
+We are looking for beta testers to help us test it!
 
 ---
 
-The entire project is completely open source under the AGPL v3 license.
-
-We are actively seeking beta testers to join our Google Play private test group.
-
-If you want to install it on your Android device 
-and help us test proximity mesh routing in the wild, 
-send an email to bensiv92@gmail.com with your Google Play email address!
+If you want to try it on your Android device, 
+send an email to bensiv92@gmail.com with your Google Play email.
 
 Check out the code on GitHub, drop a star, 
 and let's build a decentralized, local-first web together.
 
-Thanks for watching.
+Thanks for watching!
